@@ -1,0 +1,6 @@
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\bin\Release\entropyCalcExe.exe.config
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\bin\Release\entropyCalcExe.exe
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\bin\Release\entropyCalcExe.pdb
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\obj\Release\EntropyCalcExe.csprojResolveAssemblyReference.cache
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\obj\Release\entropyCalcExe.exe
+G:\Desktop\TheHackToolBoxTeek\EntropyCalcExe\EntropyCalcExe\obj\Release\entropyCalcExe.pdb
