@@ -1,7 +1,7 @@
 # TheHackToolBoxTeek
 Collection of tools for pentesting &amp; hacking
 
-Usage   - ./arpingMac.sh [broadcast]
+Usage   - ./arpingMac.sh [broadcast] 
 Example - ./arpingGetMac.sh 192.168.1.255
 Example - ./arpingGetMac.sh 192.168.1.0 > macList.txt
 
