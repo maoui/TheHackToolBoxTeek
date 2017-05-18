@@ -1,0 +1,8 @@
+G:\Desktop\EexPumpTeek\EexPumpTeek\bin\x86\Release\Exe Pump Teek.exe.config
+G:\Desktop\EexPumpTeek\EexPumpTeek\bin\x86\Release\Exe Pump Teek.exe
+G:\Desktop\EexPumpTeek\EexPumpTeek\bin\x86\Release\Exe Pump Teek.pdb
+G:\Desktop\EexPumpTeek\EexPumpTeek\obj\x86\Release\EexPumpTeek.Form1.resources
+G:\Desktop\EexPumpTeek\EexPumpTeek\obj\x86\Release\ExePumpTeek.Properties.Resources.resources
+G:\Desktop\EexPumpTeek\EexPumpTeek\obj\x86\Release\ExePumpTeek.csproj.GenerateResource.Cache
+G:\Desktop\EexPumpTeek\EexPumpTeek\obj\x86\Release\Exe Pump Teek.exe
+G:\Desktop\EexPumpTeek\EexPumpTeek\obj\x86\Release\Exe Pump Teek.pdb
