@@ -53,12 +53,11 @@
             this.groupBox3.Controls.Add(this.buttonBrowsePump);
             this.groupBox3.Controls.Add(this.textBoxPump);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(486, 169);
+            this.groupBox3.Size = new System.Drawing.Size(500, 182);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "File Pumper";
@@ -67,7 +66,7 @@
             // 
             this.buttonPump.BackColor = System.Drawing.Color.Black;
             this.buttonPump.ForeColor = System.Drawing.Color.White;
-            this.buttonPump.Location = new System.Drawing.Point(89, 132);
+            this.buttonPump.Location = new System.Drawing.Point(89, 144);
             this.buttonPump.Name = "buttonPump";
             this.buttonPump.Size = new System.Drawing.Size(296, 23);
             this.buttonPump.TabIndex = 12;
@@ -83,10 +82,10 @@
             23,
             0,
             0});
+            this.numericUpDownMo.MinimumSize = new System.Drawing.Size(296, 0);
             this.numericUpDownMo.Name = "numericUpDownMo";
             this.numericUpDownMo.Size = new System.Drawing.Size(296, 22);
             this.numericUpDownMo.TabIndex = 11;
-            this.numericUpDownMo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDownMo.Value = new decimal(new int[] {
             65,
             0,
@@ -104,7 +103,6 @@
             this.numericUpDownKo.Name = "numericUpDownKo";
             this.numericUpDownKo.Size = new System.Drawing.Size(296, 22);
             this.numericUpDownKo.TabIndex = 10;
-            this.numericUpDownKo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDownKo.Value = new decimal(new int[] {
             1024,
             0,
@@ -114,34 +112,32 @@
             // radioButtonMo
             // 
             this.radioButtonMo.AutoSize = true;
-            this.radioButtonMo.Checked = true;
             this.radioButtonMo.ForeColor = System.Drawing.Color.White;
             this.radioButtonMo.Location = new System.Drawing.Point(9, 104);
             this.radioButtonMo.Name = "radioButtonMo";
             this.radioButtonMo.Size = new System.Drawing.Size(39, 18);
             this.radioButtonMo.TabIndex = 9;
-            this.radioButtonMo.TabStop = true;
             this.radioButtonMo.Text = "Mo";
             this.radioButtonMo.UseVisualStyleBackColor = true;
-            this.radioButtonMo.CheckedChanged += new System.EventHandler(this.radioButtonMo_CheckedChanged);
             // 
             // radioButtonKo
             // 
             this.radioButtonKo.AutoSize = true;
+            this.radioButtonKo.Checked = true;
             this.radioButtonKo.ForeColor = System.Drawing.Color.White;
             this.radioButtonKo.Location = new System.Drawing.Point(9, 80);
             this.radioButtonKo.Name = "radioButtonKo";
             this.radioButtonKo.Size = new System.Drawing.Size(39, 18);
             this.radioButtonKo.TabIndex = 2;
+            this.radioButtonKo.TabStop = true;
             this.radioButtonKo.Text = "Ko";
             this.radioButtonKo.UseVisualStyleBackColor = true;
-            this.radioButtonKo.CheckedChanged += new System.EventHandler(this.radioButtonKo_CheckedChanged);
             // 
             // buttonBrowsePump
             // 
             this.buttonBrowsePump.BackColor = System.Drawing.Color.Black;
             this.buttonBrowsePump.ForeColor = System.Drawing.Color.White;
-            this.buttonBrowsePump.Location = new System.Drawing.Point(391, 52);
+            this.buttonBrowsePump.Location = new System.Drawing.Point(401, 46);
             this.buttonBrowsePump.Name = "buttonBrowsePump";
             this.buttonBrowsePump.Size = new System.Drawing.Size(75, 23);
             this.buttonBrowsePump.TabIndex = 8;
@@ -171,10 +167,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(486, 169);
+            this.ClientSize = new System.Drawing.Size(524, 204);
             this.Controls.Add(this.groupBox3);
-            this.MaximumSize = new System.Drawing.Size(502, 207);
-            this.MinimumSize = new System.Drawing.Size(502, 207);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(540, 242);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Exe Pump Teek by Teeknofil";
