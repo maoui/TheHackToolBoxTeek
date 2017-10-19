@@ -19,145 +19,196 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Charset
+namespace ASCII
 {
     class Syllable : Pattern
     {
-        public List<string> ListSyllableLowerCase_fr(string charsetName)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="charsetName"></param>
+        /// <returns></returns>
+        
+        public List<string> SyllableLowercaseFr(string charsetName)
         {
-            if (charsetName == "lsyllable")
+            if (charsetName == "lsyllable-fr")
             {
                 //syllable
                 CharsetSelecting = SyllableFr;
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-space")
+            else if (charsetName == "lsyllable-fr-space")
             {
                 //lsyllable-space
                 CharsetSelecting = SyllableFr.Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-numeric")
+            else if (charsetName == "lsyllable-fr-numeric")
             {
                 // lsyllable-numeric
-                CharsetSelecting = SyllableFr.Concat(Numeric).ToList();
+                CharsetSelecting = SyllableFr.Concat(Digits).ToList();
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-numeric-space")
+            else if (charsetName == "lsyllable-fr-numeric-space")
             {
                 // lsyllable-numeric-space
-                CharsetSelecting = SyllableFr.Concat(Numeric).Concat(Space).ToList();
-           }
-            else if (charsetName == "lsyllable-numeric-symbol14")
+                CharsetSelecting = SyllableFr.Concat(Digits).Concat(Space).ToList();
+                Validated = false;
+            }
+            else if (charsetName == "lsyllable-fr-numeric-symbol14")
             {
                 //lsyllable - numeric - symbol14
-                CharsetSelecting = SyllableFr.Concat(Numeric).Concat(Symbols14).ToList();
+                CharsetSelecting = SyllableFr.Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-numeric-symbol14-space")
+            else if (charsetName == "lsyllable-fr-numeric-symbol14-space")
             {
                 // lsyllable-numeric-symbol14-space
-               CharsetSelecting = SyllableFr.Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();
+               CharsetSelecting = SyllableFr.Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-numeric-all")
+            else if (charsetName == "lsyllable-fr-numeric-all")
             {
                 //lsyllable-numeric-all
-                CharsetSelecting = SyllableFr.Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                CharsetSelecting = SyllableFr.Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
-            else if (charsetName == "lsyllable-numeric-all-space")
+            else if (charsetName == "lsyllable-fr-numeric-all-space")
             {
                 //lsyllable-numeric-all-space
-                CharsetSelecting = SyllableFr.Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
             }
-            
+            else
+            {
+                Validated = true;
+            }
+
             return CharsetSelecting;
         }
 
-        public List<string> ListSyllableUpperCase_fr(string charsetName)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="charsetName"></param>
+        /// <returns></returns>
+         
+
+        public List<string> SyllableUppercaseFr(string charsetName)
         {
-            if (charsetName == "usyllable")
+            if (charsetName == "usyllable-fr")
             {
                 //usyllable
                 CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper());
+                Validated = false;
             }
-            else if (charsetName == "usyllable-space")
+            else if (charsetName == "usyllable-fr-space")
             {
                 //usyllable-space
                 CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric")
+            else if (charsetName == "usyllable-fr-numeric")
             {
                 //usyllable-numeric
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric-space")
+            else if (charsetName == "usyllable-fr-numeric-space")
             {
                 //usyllable-numeric-space
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric-symbol14")
+            else if (charsetName == "usyllable-fr-numeric-symbol14")
             {
                 //usyllable-numeric-symbol14
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric-symbol14-space")
+            else if (charsetName == "usyllable-fr-numeric-symbol14-space")
             {
                 //usyllable_numeric-symbol14-space
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric-all")
+            else if (charsetName == "usyllable-fr-numeric-all")
             {
                 //usyllable-numeric-all
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
-            else if (charsetName == "usyllable-numeric-all-space")
+            else if (charsetName == "usyllable-fr-numeric-all-space")
             {
                 //usyllable-numeric-all-space
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
             }
-            
+            else
+            {
+                Validated = true;
+            }
             return CharsetSelecting;
         }
 
-        public List<string> ListMixsyllable_fr(string charsetName)
+        public List<string> MixSyllableFr(string charsetName)
         {
-            if (charsetName == "mixsyllable")
+            if (charsetName == "mixsyllable-fr")
             {
                 //mixsyllable
                 CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-space")
+            else if (charsetName == "mixsyllable-fr-space")
             {
                 //mixsyllable-space
                 CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric")
+            else if (charsetName == "mixsyllable-fr-numeric")
             {
                 //mixsyllable-numeric
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric-space")
+            else if (charsetName == "mixsyllable-fr-numeric-space")
             {
                 //mixsyllable-numeric-space
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric-symbol14")
+            else if (charsetName == "mixsyllable-fr-numeric-symbol14")
             {
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric-symbol14-space")
+            else if (charsetName == "mixsyllable-fr-numeric-symbol14-space")
             {
                 // mixsyllable-numeric-symbol14-space
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric-all")
+            else if (charsetName == "mixsyllable-fr-numeric-all")
             {
                 //mixsyllable-numeric-all
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
-            else if (charsetName == "mixsyllable-numeric-all-space")
+            else if (charsetName == "mixsyllable-fr-numeric-all-space")
             {
                 //mixsyllable-numeric-all-space
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
             }
-            
+            else
+            {
+                Validated = true;
+            }
+
             return CharsetSelecting;
         }
     }
 }
+

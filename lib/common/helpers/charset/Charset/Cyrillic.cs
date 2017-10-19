@@ -19,7 +19,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Charset
+namespace ASCII
 {
     class Cyrillic : Pattern
     {
@@ -34,37 +34,48 @@ namespace Charset
             else if (charsetName == "lcyrillic-space")
             {
                 // lcyrillic-space
-                CharsetSelecting = Cyrillic.Concat(Space).ToList();                
+                CharsetSelecting = Cyrillic.Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric")
             {
                 // lcyrillic-numeric
-                CharsetSelecting = Cyrillic.Concat(Numeric).ToList();                
+                CharsetSelecting = Cyrillic.Concat(Digits).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric-space")
             {
                 //lcyrillic - numeric - space
-                CharsetSelecting = Cyrillic.Concat(Numeric).Concat(Space).ToList();                
+                CharsetSelecting = Cyrillic.Concat(Digits).Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric-symbol14")
             {
                 //lcyrillic-numeric-symbol14
-                CharsetSelecting = Cyrillic.Concat(Numeric).Concat(Symbols14).ToList();                
+                CharsetSelecting = Cyrillic.Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric-symbol14-space")
             {
                 // lcyrillic-numeric-symbol14-space
-                CharsetSelecting = Cyrillic.Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();               
+                CharsetSelecting = Cyrillic.Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric-all")
             {
                 //lcyrillic-numeric-all
-                CharsetSelecting = Cyrillic.Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();              
+                CharsetSelecting = Cyrillic.Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
             else if (charsetName == "lcyrillic-numeric-all-space")
             {
                 //lcyrillic-numeric-all-space
-                CharsetSelecting = Cyrillic.Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                CharsetSelecting = Cyrillic.Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
+            }
+            else
+            {
+                Validated = true;
             }
 
             return CharsetSelecting;
@@ -75,42 +86,53 @@ namespace Charset
             if (charsetName == "ucyrillic")
             {
                 //ucyrillique
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).ToList();            
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-space")
             {
                 //uacyrillique-space
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Space).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric")
             {
                 //ucyrillique-numeric
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric-space")
             {
                 //ucyrillique_numeric_space
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Space).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric-symbol14")
             {
                 //ucyrillic-numeric-symbol14
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric-symbol14-space")
             {
                 //ucyrillic-numeric-symbol14-space
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric-all")
             {
                 //ucyrillique-numeric-all
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
             else if (charsetName == "ucyrillic-numeric-all-space")
             {
                 //ucyrillique-numeric-all-space
-                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();                
+                CharsetSelecting = Cyrillic.ConvertAll(item => item.ToUpper()).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();                
+            }
+            else
+            {
+                Validated = true;
             }
 
             return CharsetSelecting;
@@ -123,49 +145,61 @@ namespace Charset
             {
                 //mixcyrillic
                 CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).ToList();
-                
+                Validated = false;
+
             }
             else if (charsetName == "mixcyrillic-space")
             {
                 //mixcyrillic-space
                 CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Space).ToList();
-               
+                Validated = false;
+
             }
             else if (charsetName == "mixcyrillic-numeric")
             {
                 //mixcyrillic-numeric
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).ToList();
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).ToList();
+                Validated = false;
 
             }
             else if (charsetName == "mixcyrillic-numeric-space")
             {
                 //mixcyrillic-numeric-space
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Space).ToList();
-                
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Space).ToList();
+                Validated = false;
+
             }
             else if (charsetName == "mixcyrillic-numeric-symbol14")
             {
                 //mixcyrillic-numeric-symbol14
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).ToList();
-                
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).ToList();
+                Validated = false;
+
             }
             else if (charsetName == "mixcyrillic-numeric-symbol14-space")
             {
                 //mixcyrillic-numeric-symbol14-space
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(Space).ToList();
-                
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(Space).ToList();
+                Validated = false;
+
             }
             else if (charsetName == "mixcyrillic-numeric-all")
             {
                 //mixcyrillic-numeric-all
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).ToList();
+                Validated = false;
             }
             else if (charsetName == "mixcyrillic-numeric-all-space")
             {
                 //mixcyrillic-numeric-all-space
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Numeric).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(Digits).Concat(Symbols14).Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
             }
-            
+            else
+            {
+                Validated = true;
+            }
+
             return CharsetSelecting;
         }
     }

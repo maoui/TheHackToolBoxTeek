@@ -21,64 +21,81 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Charset
+namespace ASCII
 {
     class Special : Pattern
-    {                
+    {             
+        
+           
 
-        public List<string> ListHexa(string charsetName)
+        public List<string> Hex(string charsetName)
         {
             if (charsetName == "hex-lower")
             {
                 //hex-lower
-                CharsetSelecting = Numeric.Concat(HexLower).ToList();                
+                CharsetSelecting = Digits.Concat(Hexa).ToList();
+                Validated = false;
             }
             else if (charsetName == "hex-upper")
             {
                 //hex-upper 
-                CharsetSelecting = Numeric.Concat(HexUpper).ToList();
+                CharsetSelecting = Digits.Concat(Hexa.ConvertAll(item => item.ToUpper())).ToList();
+                Validated = false;
             }
             
             return CharsetSelecting;
         }
 
-        public List<string> ListNumeric(string charsetName)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="charsetName"></param>
+        /// <returns></returns>
+        public List<string> Numeric(string charsetName)
         {
             if (charsetName == "numeric")
             {
                 //numeric
-                CharsetSelecting = Numeric;
+                CharsetSelecting = Digits;
+                Validated = false;
             }
             else if (charsetName == "numeric-space")
             {
                 //numeric-space
-                CharsetSelecting = Numeric.Concat(Space).ToList();
+                CharsetSelecting = Digits.Concat(Space).ToList();
+                Validated = false;
             }
-            
+
             return CharsetSelecting;
         }
 
-        public List<string> ListSymbols(string charsetName)
+
+        public List<string> Symbols(string charsetName)
         {
             if (charsetName == "symbols14")
             {
                 //symbols14  
-                CharsetSelecting = Symbols14;                
+                CharsetSelecting = Symbols14;
+                Validated = false;
             }
             else if (charsetName == "symbols14-space")
             {
                 //symbols14-space
-                CharsetSelecting = Symbols14.Concat(Space).ToList();                
+                CharsetSelecting = Symbols14.Concat(Space).ToList();
+                Validated = false;
             }
             else if (charsetName == "symbols-all")
             {
                 //symbols-all
-                CharsetSelecting = Symbols14.Concat(SymbolsAll).ToList();                
+                CharsetSelecting = Symbols14.Concat(SymbolsAll).ToList();
+                Validated = false;
             }
             else if (charsetName == "symbols-all-space")
             {
                 //symbols-all-space
                 CharsetSelecting = Symbols14.Concat(SymbolsAll).Concat(Space).ToList();
+                Validated = false;
             }           
 
             return CharsetSelecting;

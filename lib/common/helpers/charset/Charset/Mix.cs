@@ -1,99 +1,50 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Charset
+namespace ASCII
 {
     class Mix : Pattern
     {
-        public List<string> MixLetters(string charsetName)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list1"></param>
+        /// <param name="list2"></param>
+        /// <returns></returns>
+        public List<string> MixListToTwo(List<string> list1, List<string> list2)
         {
-            
-            if (charsetName == "mix")
-            {
-                // mixalpha-sv-mixalpha-mixcyrillic-mixsyllableFR
-                CharsetSelecting = Lalpha.Concat(Ualpha).Concat(Lalpha_sv).Concat(Ualpha).Concat(UalphaSv).ToList().Concat(Cyrillic).Concat(Cyrillic.ConvertAll(item => item.ToUpper())).Concat(SyllableFr).Concat(SyllableFr.ConvertAll(item => item.ToUpper())).ToList();
-                Validated = false;
-            }
-            else if (charsetName == "hex-letters-lower")
-            {
-                //hex-lower
-                CharsetSelecting = HexLower.ToList();
-                Validated = false;
-            }
-            else if (charsetName == "hex-letters-upper")
-            {
-                //hex-upper 
-                CharsetSelecting = HexUpper.ToList();
-                Validated = false;
-            }
-            else if (charsetName == "hexa-letters-mix")
-            {
-                //hex-upper 
-                CharsetSelecting = HexLower.Concat(HexUpper).ToList();
-                Validated = false;
-            }
-            else if (charsetName == "lalpha")
-            {
-                // lalpha
-                CharsetSelecting = Lalpha.ToList();
-                Validated = false;
-            }
-            else if (charsetName == "ualpha")
-            {
-                //ualpha
-                CharsetSelecting = Ualpha;
-                Validated = false;
-            }
-            else if (charsetName == "mixalpha")
-            {
-                //mixalpha
-                CharsetSelecting = Lalpha.Concat(Ualpha).ToList();
-                Validated = false;
-            }
-            else if (charsetName == "sv-lalpha")
-            {
-                CharsetSelecting = Lalpha.Concat(Lalpha_sv).ToList();
-            }
-            else if (charsetName == "sv-ualpha")
-            {
-                //ualpha-sv
-                CharsetSelecting = Ualpha.Concat(UalphaSv).ToList();
-            }
-            else if (charsetName == "sv-mixalpha")
-            {
-                //mixalpha-sv
-                CharsetSelecting = Lalpha.Concat(Lalpha_sv).Concat(Ualpha).Concat(UalphaSv).ToList();
+            Validated = false;
+            return CharsetSelecting = list1.Concat(list2).ToList();
+        }
 
-            }
-            else if (charsetName == "lcyrillic")
-            {
-                //lcyrillic
-                CharsetSelecting = Cyrillic.ToList();
 
-            }
-            else if (charsetName == "mixcyrillic")
-            {
-                //mixcyrillic
-                CharsetSelecting = Cyrillic.Concat(Cyrillic.ConvertAll(item => item.ToUpper())).ToList();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list1"></param>
+        /// <param name="list2"></param>
+        /// <param name="list3"></param>
+        /// <returns></returns>
+        public List<string> MixListToThree(List<string> list1, List<string> list2, List<string> list3)
+        {
+            Validated = false;
+            return CharsetSelecting = list1.Concat(list2).Concat(list3).ToList();
+        }
 
-            }
-            else if (charsetName == "lsyllable")
-            {
-                //syllable
-                CharsetSelecting = SyllableFr;
-            }
-            else if (charsetName == "usyllable")
-            {
-                //usyllable
-                CharsetSelecting = SyllableFr.ConvertAll(item => item.ToUpper());
-            }
-            else if (charsetName == "mixsyllable")
-            {
-                //mixsyllableFR
-                CharsetSelecting = SyllableFr.Concat(SyllableFr.ConvertAll(item => item.ToUpper())).ToList();
-            }
 
-            return CharsetSelecting;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list1"></param>
+        /// <param name="list2"></param>
+        /// <param name="list3"></param>
+        /// <param name="list4"></param>
+        /// <returns></returns>
+
+        public List<string> MixListToFour(List<string> list1, List<string> list2, List<string> list3, List<string> list4)
+        {
+            Validated = false;
+            return CharsetSelecting = list1.Concat(list2).Concat(list3).Concat(list4).ToList();
         }
     }
 }

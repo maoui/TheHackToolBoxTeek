@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alpha.cs" />
-    <Compile Include="AlphaSv.cs" />
+    <Compile Include="Latin.cs" />
     <Compile Include="Cyrillic.cs" />
+    <Compile Include="ILatin.cs" />
     <Compile Include="Mix.cs" />
     <Compile Include="Pattern.cs" />
     <Compile Include="Special.cs" />
