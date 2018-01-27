@@ -1,4 +1,7 @@
-# TheHackToolBoxTeek
-Collection of tools for pentesting &amp; hacking
+#Calcul entropy for detection malware.
 
-ExeToShellcode : Convertit un exécutable ou une dll en shellcode C#
+EntropyCalcExe.exe coded by Teeknofil, version : 1.0
+
+	 Drag and Drop file on entropyCalcExe.exe
+
+cli -> entropyCalcExe.exe file.exe
