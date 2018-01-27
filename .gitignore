@@ -319,3 +319,8 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+EntropyCalcExe/EntropyCalcExe/obj/
+ExePumpTeek/ExePumpTeek/obj/
+exe2bytes/.vs/
+ExePumpTeek/.vs/
+EntropyCalcExe/.vs/
