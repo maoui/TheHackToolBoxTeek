@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Exe2Shellcode
+namespace Exe2Bytes
 {
     class Program
     {
@@ -38,13 +38,13 @@ namespace Exe2Shellcode
             }
             else if (args[0].ToLower() == "-h" | args[0].ToLower() == "--help" | args[0].ToLower() == "/?" |  args[0].ToLower() == "/help")
             {
-                Console.WriteLine("\n\tUsing :\n\n\t  exe2shellcode [*.exe|*.dll] [option 2]");
+                Console.WriteLine("\n\tUsing :\n\n\t  exe2Bytes [*.exe|*.dll] [option 2]");
                 Console.WriteLine("\n\t -h option for display help");
-                Console.WriteLine("\n\t  R display shellcode");
-                Console.WriteLine("\n\t -o : writing shellcode in txt file");
+                Console.WriteLine("\n\t  R display bytes");
+                Console.WriteLine("\n\t -o : writing bytes in txt file");
                 Console.WriteLine("\n\tExample :");
-                Console.WriteLine("\n\t exe2shellcode file.exe R");
-                Console.WriteLine("\t exe2shellcode file.exe -o shellcode.txt");
+                Console.WriteLine("\n\t exe2Bytes file.exe R");
+                Console.WriteLine("\t exe2Bytes file.exe -o bytes.txt");
             }
             else
             {
