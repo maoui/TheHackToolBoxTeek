@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exe2Base64", "Exe2Base64\Exe2Base64.csproj", "{74EFE601-9A93-46C3-932E-B80AB6570E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetAssemblyDetect", "..\NatifCodeDetect\NetAssemblyDetect.csproj", "{AFEFF505-14C1-4ECF-B714-ABAC4FBD48E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{74EFE601-9A93-46C3-932E-B80AB6570E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74EFE601-9A93-46C3-932E-B80AB6570E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74EFE601-9A93-46C3-932E-B80AB6570E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEFF505-14C1-4ECF-B714-ABAC4FBD48E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEFF505-14C1-4ECF-B714-ABAC4FBD48E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEFF505-14C1-4ECF-B714-ABAC4FBD48E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEFF505-14C1-4ECF-B714-ABAC4FBD48E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC77AEAC-F8BE-43B1-989A-F9CF2FC98DB0}
 	EndGlobalSection
 EndGlobal
