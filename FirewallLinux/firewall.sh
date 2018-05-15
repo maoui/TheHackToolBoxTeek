@@ -138,9 +138,9 @@ RulesIptables()
 #### Décommentez les ligne suivante pour
 #### Accepter le protocole ICMP (notamment le ping)
 
-# iptables -t filter -A INPUT -p icmp -j ACCEPT
-# iptables -t filter -A OUTPUT -p icmp -j ACCEP
- 	iptables -t filter -A INPUT -p icmp -s 0.0.0.0 -j ACCEPT
+	iptables -t filter -A INPUT -p icmp -j ACCEPT
+	iptables -t filter -A OUTPUT -p icmp -j ACCEP
+#iptables -t filter -A INPUT -p icmp -s 0.0.0.0 -j ACCEPT
 
 	echo -e "- Allow PING	  				: $OK"
 
@@ -154,7 +154,7 @@ RulesIptables()
 #### Accetet le protocole ICMP (notament le ping) a partir d'une adresse autoriser
 #### Régle ICMP précedante doit être  commentez
 
-# iptables -A FORWARD -s 0.0.0.0 -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
+	# iptables -A FORWARD -s 0.0.0.0 -o eth0 -p icmp --icmp-type echo-request -j ACCEPT
 
 
 #### Décommentez les lignes suivante pour autoriser le service FTP
@@ -388,8 +388,8 @@ RulesIptables()
 	#### défaut. Au passage, on note les paquets qui vont être jetés, ça peut
 	#### toujours servir.
 
-	 #iptables -A INPUT -j LOG --log-prefix "paquet IPv4 inattendu "
-	 #iptables -A INPUT -j REJECT
+	iptables -A INPUT -j LOG --log-prefix "paquet IPv4 inattendu "
+	iptables -A INPUT -j REJECT
 
 }
 
