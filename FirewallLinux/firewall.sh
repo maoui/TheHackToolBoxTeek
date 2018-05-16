@@ -139,7 +139,7 @@ RulesIptables()
 #### Accepter le protocole ICMP (notamment le ping)
 
 	iptables -t filter -A INPUT -p icmp -j ACCEPT
-	iptables -t filter -A OUTPUT -p icmp -j ACCEP
+	iptables -t filter -A OUTPUT -p icmp -j ACCEPT
 #iptables -t filter -A INPUT -p icmp -s 0.0.0.0 -j ACCEPT
 
 	echo -e "- Allow PING	  				: $OK"
